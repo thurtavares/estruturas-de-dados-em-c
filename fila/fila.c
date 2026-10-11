@@ -22,7 +22,7 @@ int estaVazia(Fila* fila) {     // Função para verificar se a fila está vazia
 }
 
 void enfileirar(Fila* fila, int valor) {     // Função para inserir um novo elemento na fila (enqueue)
-    No* novo = (No*)malloc(sizeof(No));     // Cria e a locamemória para um novo nó
+    No* novo = (No*)malloc(sizeof(No));     // Cria e aloca memória para um novo nó
     if (novo == NULL) {
         printf("Erro de alocação de memória. \n");
         exit(1); // Encerra o programa em caso de erro
