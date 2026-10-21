@@ -24,6 +24,9 @@ estruturas-de-dados-em-c/
 |-- pilha/
 |   |-- pilha.c
 |
+|-- arvore-binaria-de-busca/
+|   |-- arvore_binaria.c
+|
 |-- README.md
 ```
 
@@ -73,6 +76,36 @@ Implementação de uma pilha dinâmica utilizando listas encadeadas, seguindo o 
 - Manipulação de nós e ponteiro para o topo.
 - Funções e estruturas de repetição.
 
+### 03. Árvore Binária de Busca (BST)
+
+Implementação de uma **Árvore Binária de Busca (Binary Search Tree — BST)** utilizando a linguagem C. A estrutura organiza os elementos de forma que os valores menores que um nó sejam armazenados à esquerda e os valores maiores, à direita.
+
+O projeto explora operações fundamentais de manipulação de árvores, incluindo inserção, busca, remoção e diferentes formas de percorrer os nós.
+
+#### Funcionalidades
+
+- Inserção recursiva e iterativa de elementos.
+- Busca de valores na árvore.
+- Remoção de nós, considerando os diferentes casos de exclusão.
+- Tratamento de chaves duplicadas por meio de um contador de ocorrências.
+- Percursos em pré-ordem (Preorder), em ordem (Inorder) e pós-ordem (Postorder).
+- Percurso por nível (Level Order), utilizando uma fila encadeada.
+- Cálculo da altura da árvore.
+- Validação das propriedades de uma Árvore Binária de Busca.
+- Liberação da memória alocada dinamicamente.
+
+#### Conceitos Aplicados
+
+- Estruturas (`struct`) e tipos definidos com `typedef`.
+- Ponteiros e estruturas de dados dinâmicas.
+- Alocação e liberação de memória (`malloc` e `free`).
+- Recursividade e funções iterativas.
+- Árvores binárias e propriedades de uma BST.
+- Filas encadeadas como apoio ao percurso por nível.
+- Manipulação e remoção de nós.
+- Validação de estruturas por meio de limites de valores.
+- Análise da altura e organização dos elementos na árvore.
+
 ## Como Executar
 
 ### Pré-requisitos
@@ -101,7 +134,7 @@ Compile o programa:
 gcc fila/fila.c -o fila.exe
 ```
 
-Execute no Windows:
+Execute no Windows, utilizando o terminal do VS Code:
 
 ```powershell
 .\fila.exe
@@ -121,7 +154,21 @@ Execute no Windows:
 .\pilha.exe
 ```
 
-## Exemplo de Execução
+#### Árvore Binária de Busca (BST)
+
+Compile o programa:
+
+```bash
+gcc arvore-binaria-de-busca/arvore_binaria.c -o arvore_binaria.exe -Wall -Wextra
+```
+
+Execute no Windows:
+
+```powershell
+.\arvore_binaria.exe
+```
+
+## Exemplos de Execução
 
 ### Fila Dinâmica (FIFO)
 
@@ -170,11 +217,43 @@ Elemento removido: 10
 A pilha está vazia.
 ```
 
+### Árvore Binária de Busca (BST)
+
+Considerando a inserção dos valores `10`, `20`, `30`, `40` e `50`, nessa ordem, a árvore resultante fica inclinada à direita, pois cada novo valor é maior que o anterior.
+
+```text
+10
+  \
+   20
+     \
+      30
+        \
+         40
+           \
+            50
+```
+
+Exemplo dos percursos dessa árvore:
+
+```text
+Preorder:  10 20 30 40 50
+Inorder:   10 20 30 40 50
+Postorder: 50 40 30 20 10
+
+Level Order: 10 20 30 40 50
+
+Altura da árvore: 4
+```
+
+**Observação:** a altura é medida em arestas, considerando uma árvore com um único nó como altura `0` e uma árvore vazia como altura `-1`. A inserção dos valores em ordem crescente demonstra que uma BST comum pode se tornar desbalanceada.
+
 ## Objetivo do Repositório
 
 Este repositório tem como finalidade registrar minha evolução no aprendizado de estruturas de dados, por meio da implementação de exercícios práticos em linguagem C.
 
-Novas implementações serão adicionadas conforme o avanço dos estudos, explorando diferentes estruturas e suas aplicações no desenvolvimento de software.
+Cada projeto representa uma oportunidade de aprofundar conhecimentos em lógica de programação, gerenciamento de memória, ponteiros e organização de dados, desenvolvendo gradualmente uma base sólida para a construção de software.
+
+Novas implementações serão adicionadas conforme o avanço dos estudos, explorando diferentes estruturas de dados e suas aplicações.
 
 ---
 
